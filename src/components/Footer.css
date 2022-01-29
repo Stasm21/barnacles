@@ -4,5 +4,9 @@
     height: 50px;
     background-color: #0C294A;
     bottom: 0;
-    position: fixed;
+    position: bottom;
+}
+
+h2 {
+    color: white;
 }
