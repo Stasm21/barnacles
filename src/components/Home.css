@@ -1,6 +1,6 @@
 
 .home-img {
-    width: 450px;
+    width: 388px;
     height: 518px;
 }
 
@@ -17,10 +17,13 @@
     padding-bottom: 20px;
     font-family: "Ledger", serif;
     text-transform: uppercase;
-    font-size: ;
     color: #333333;
 }
 
 .home-info {
     width: 600px;
+}
+
+.home-details {
+    font-size: 20px;
 }

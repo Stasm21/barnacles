@@ -1,0 +1,72 @@
+
+.cook-img {
+    width: 442px;
+    height: 442px;
+}
+
+/* .cook-ul {
+    display: block;
+} */
+
+/* .cook-ul {
+    text-decoration: dotted;
+} */
+
+.cook-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.cook-info {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cook-heading {
+    padding-bottom: 25px;
+    font-family: "Ledger", serif;
+    color: #333333;
+}
+
+.cook-ul {
+    /* display: block; */
+    /* margin-top: 20px; */
+    /* display: inline-block; */
+    /* float: left; */
+}
+
+.cook-ul li {
+    /* display: inline; */
+    /* margin-top: ; */
+    font-size: 18px;
+    font-family: "Ledger", serif;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+/* li {
+    display: inline-block;
+} */
+
+.cook-box {
+    padding-bottom: 100px;
+    border-top: 3px solid rgb(20, 57, 81);
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+.cook-heading {
+    padding-bottom: 30px;
+    padding-top: 20px;
+    font-size: 26px;
+    font-family: "Ledger", serif;
+    color: #333333;
+}
