@@ -41,7 +41,7 @@ const Cook = () => {
             </div>
 
             <div className="cook-box">
-                <h1 className="cook-heading">Cooking example Video</h1>
+                <h1 className="cook-heading">Cooking Example Video</h1>
                 <iframe
                     width="560"
                     height="315"
