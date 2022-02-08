@@ -21,15 +21,17 @@
 }
 
 .cook-info {
-    width: 600px;
+    width: 450px;
     display: flex;
     flex-direction: column;
 }
 
 .cook-heading {
-    padding-bottom: 25px;
+    padding-bottom: 0;
+    margin-bottom: 25px;
     font-family: "Ledger", serif;
     color: #333333;
+    border-bottom: solid black 3px;
 }
 
 .cook-ul {
@@ -54,7 +56,7 @@
 
 .cook-box {
     padding-bottom: 100px;
-    border-top: 3px solid rgb(20, 57, 81);
+    /* border-top: 3px solid rgb(20, 57, 81); */
     width: 1000px;
     display: block;
     margin-left: auto;
@@ -64,7 +66,8 @@
 }
 
 .cook-heading {
-    padding-bottom: 30px;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
     padding-top: 20px;
     font-size: 26px;
     font-family: "Ledger", serif;
