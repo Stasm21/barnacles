@@ -1,15 +1,29 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Harvest from "./components/Harvest";
-import Cook from "./components/Cook"
-import Regulations from "./components/Regulations"
-import FAQS from "./components/FAQS"
+import Cook from "./components/Cook";
+import Regulations from "./components/Regulations";
+import FAQS from "./components/FAQS";
+import { useState, useEffect } from "react";
+import axios, { Axios } from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+    const [topic, setTopic] = useState("");
+    const [text, setText] = useState("");
+
+    const submitTopic = () => {
+        Axios.post("http://localhost:3001/api/insert", {
+            topic: topic,
+            question: text,
+        }).then(() => {
+            alert("successful insert")
+        });
+    };
+
     return (
         <div className="App">
             {/* <Navbar /> */}
@@ -20,7 +34,15 @@ function App() {
                         <Route path="harvest" element={<Harvest />} />
                         <Route path="cook" element={<Cook />} />
                         <Route path="regulations" element={<Regulations />} />
-                        <Route path="faqs" element={<FAQS />} />
+                        <Route
+                            path="faqs"
+                            topic={topic}
+                            setTopic={setTopic}
+                            text={text}
+                            setText={setText}
+                            submitTopic={submitTopic}
+                            element={<FAQS />}
+                        />
                     </Route>
                 </Routes>
             </BrowserRouter>
