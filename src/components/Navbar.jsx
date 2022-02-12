@@ -24,28 +24,28 @@ const Navbar = () => {
                     <ul className="navbar-ul">
                         <Link to="/">
                             <li>
-                                <a>HOME</a>
+                                <a href="#">HOME</a>
                             </li>
                         </Link>
 
                         <Link to="/harvest">
                             <li>
-                                <a>HARVEST</a>
+                                <a href="#">HARVEST</a>
                             </li>
                         </Link>
                         <Link to="/cook">
                             <li>
-                                <a>COOK</a>
+                                <a href="#">COOK</a>
                             </li>
                         </Link>
                         <Link to="/regulations">
                             <li>
-                                <a>REGULATIONS</a>
+                                <a href="#">REGULATIONS</a>
                             </li>
                         </Link>
                         <Link to="/faqs">
                             <li>
-                                <a>FAQS</a>
+                                <a href="#">FAQS</a>
                             </li>
                         </Link>
                     </ul>
