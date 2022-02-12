@@ -1,0 +1,26 @@
+.topic-box {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+.text-box {
+    margin-top: 10px;
+    width: 30%;
+    height: 100px;
+}
+
+.reply {
+    font-size: 10px;
+    margin: 10px;
+}
+
+.reply:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.post-button {
+    margin-bottom: 50px;
+}

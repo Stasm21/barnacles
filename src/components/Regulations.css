@@ -34,4 +34,9 @@
 
 .img-box {
     padding-top: 25px;
+    width: 750px;
+}
+
+.reg-container {
+    margin-bottom: 50px;
 }

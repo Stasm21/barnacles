@@ -14,10 +14,10 @@ const Cook = () => {
                 </div>
                 <div className="cook-info">
                     <h1 className="cook-heading">
-                        Cooking Gooseneck Barnacles
+                        COOKING GOOSENECK BARNACLES
                     </h1>
                     <div>
-                        <ul className="cook-ul">
+                        <ol className="cook-ul">
                             <li>Rinse Gooseneck Barnacles off with water</li>
                             <li>Fill pot with ocean water, or salt water</li>
                             <li>Bring water to a boil</li>
@@ -25,7 +25,7 @@ const Cook = () => {
                             <li>Cook for 45 seconds to 1 minute</li>
                             <li>Take out and blanch</li>
                             <li>Blanch no more than 5 minutes</li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
             </div>

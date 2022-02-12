@@ -12,8 +12,17 @@ import Axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-    const [topic, setTopic] = useState("");
+    const [topic, setTopic] = useState("Question");
     const [text, setText] = useState("");
+    const [list, setList] = useState([]);
+
+    useEffect(() => {
+        Axios.get("http://localhost:8000/api/get").then((response) => {
+            setList(response.data);
+        });
+    }, []);
+
+    // console.log(setList)
 
     const submitTopic = () => {
         Axios.post("http://localhost:8000/api/insert", {
@@ -21,8 +30,9 @@ function App() {
             question: text,
         }).then(() => {
             alert("successful insert");
-
         });
+        setTopic("Question");
+        setText("")
     };
 
     return (
@@ -37,11 +47,6 @@ function App() {
                         <Route path="regulations" element={<Regulations />} />
                         <Route
                             path="faqs"
-                            // topic={topic}
-                            // setTopic={setTopic}
-                            // text={text}
-                            // setText={setText}
-                            // submitTopic={submitTopic}
                             element={
                                 <FAQS
                                     topic={topic}
@@ -49,13 +54,14 @@ function App() {
                                     text={text}
                                     setText={setText}
                                     submitTopic={submitTopic}
+                                    list={list}
                                 />
                             }
                         />
                     </Route>
                 </Routes>
             </BrowserRouter>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

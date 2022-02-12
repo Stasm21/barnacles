@@ -1,24 +1,22 @@
-import './FAQS.css'
+import "./FAQS.css";
 
-const FAQS = ({ setTopic, setText, submitTopic, topic, text }) => {
-
-    // console.log('hello')
+const FAQS = ({ setTopic, setText, submitTopic, topic, text, list }) => {
+    // console.log(setList)
 
     const submitHandler = (e) => {
         e.preventDefault();
         submitTopic(setTopic);
-    }
-
-    console.log(topic)
+    };
 
     return (
         <div>
             <h1>FAQs</h1>
 
             <div className="form">
-                <h1>Topic:</h1>
+                {/* <h1>Topic:</h1> */}
                 <select
-                    // onChange={statusHandler}
+                    className="topic-box"
+                    value={topic}
                     type="text"
                     name="topic"
                     onChange={(e) => {
@@ -40,8 +38,9 @@ const FAQS = ({ setTopic, setText, submitTopic, topic, text }) => {
                 /> */}
 
                 <div>
-                    <input
-                        // value={text}
+                    <textarea
+                        className="text-box"
+                        value={text}
                         type="text"
                         name="text"
                         onChange={(e) => {
@@ -50,7 +49,20 @@ const FAQS = ({ setTopic, setText, submitTopic, topic, text }) => {
                     />
                 </div>
 
-                <button onClick={submitHandler}>Submit</button>
+                <button className="post-button" onClick={submitHandler}>POST</button>
+                {list.map((val) => {
+                    return (
+                        <div>
+                            <div>
+                                <h1 key={val.id}>{val.topic}</h1>
+                            </div>
+                            <div>
+                                <p key={val.id}>{val.question}</p>
+                            </div>
+                            <p className="reply">reply</p>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
