@@ -5,7 +5,7 @@ const FAQS = ({ setTopic, setText, submitTopic, topic, text, list }) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        submitTopic(setTopic);
+        submitTopic();
     };
 
     return (

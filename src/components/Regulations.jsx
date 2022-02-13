@@ -28,7 +28,7 @@ const Regulations = () => {
                     ​1-800-448-2474​
                 </p>
             </div>
-            <div>
+            <div className="jetty-img">
                 <img
                     src={jetty}
                     alt="oregon jetty on coast"

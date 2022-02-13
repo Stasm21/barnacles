@@ -14,7 +14,7 @@ import Axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-    const [topic, setTopic] = useState("Question");
+    const [topic, setTopic] = useState("");
     const [text, setText] = useState("");
     const [list, setList] = useState([]);
 
@@ -30,11 +30,9 @@ function App() {
         Axios.post("http://localhost:8000/api/insert", {
             topic: topic,
             question: text,
-        }).then(() => {
-            alert("successful insert");
         });
-        setTopic("Question");
-        setText("")
+
+        setList([...list, { topic: topic, questions: text }]);
     };
 
     return (
@@ -47,7 +45,12 @@ function App() {
                         <Route path="harvest" element={<Harvest />} />
                         <Route path="cook" element={<Cook />} />
                         <Route path="regulations" element={<Regulations />} />
-                        <Route path="info" element={<Info />} />
+                        <Route
+                            path="info"
+                            element={
+                                <Info submitTopic={submitTopic} list={list} />
+                            }
+                        />
                         {/* <Route
                             path="faqs"
                             element={
@@ -61,7 +64,15 @@ function App() {
                                 />
                             }
                         /> */}
-                        <Route path="general" element={<General />} />
+                        <Route
+                            path="general"
+                            element={
+                                <General
+                                    submitTopic={submitTopic}
+                                    list={list}
+                                />
+                            }
+                        />
                     </Route>
                 </Routes>
             </BrowserRouter>
