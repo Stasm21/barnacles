@@ -1,0 +1,29 @@
+
+.fact-card {
+    width: 584px;
+    height: 194px;
+    border: 1px solid rgb(167, 154, 154);
+    margin: auto;
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    
+}
+
+.fact-card-header {
+    font-size: 32px;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+.fact-card-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    padding: 8px;
+}

@@ -1,6 +1,7 @@
 import "./General.css";
 import InfoNav from "./InfoNav";
 import Test from "./Test";
+import FilteredGeneralCard from "./FilteredGeneralCard";
 
 const General = ({ list, submitTopic }) => {
     const addFact = () => {
@@ -24,22 +25,23 @@ const General = ({ list, submitTopic }) => {
                     {addFact}
                 </div>
             </div>
-            {list
-                .filter((obj) => obj.topic === "question")
-                .map((val) => {
-                    return (
-                        <div>
+            <div>
+                <FilteredGeneralCard list={list} />
+                {/* {list
+                    .filter((obj) => obj.topic === "question")
+                    .map((val) => {
+                        return (
                             <div>
-                                <h1 key={val.id}>{val.topic}</h1>
+                                <div>
+                                    <h1 key={val.id}>{val.topic}</h1>
+                                </div>
+                                <div>
+                                    <p key={val.id}>{val.question}</p>
+                                </div>
                             </div>
-                            <div>
-                                <p key={val.id}>{val.question}</p>
-                            </div>
-                            <p className="reply">reply</p>
-                        </div>
-                    );
-                })}
-            <div></div>
+                        );
+                    })} */}
+            </div>
         </div>
     );
 };

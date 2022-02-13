@@ -1,19 +1,22 @@
+import FilteredCard from "./FilteredFactCard";
 import "./Info.css";
 import InfoNav from "./InfoNav";
 
 const Info = ({ list }) => {
 
-    console.log(list)
+    const thing = 'fact'
+    // console.log(list)
 
     return (
-        <div>
+        <div className="info-main">
             <div>
                 <InfoNav />
                 <h1 className="facts-header">Facts</h1>
                 <div>
                     <button className="facts-add-button">+ ADD</button>
                 </div>
-                <div>
+                <FilteredCard list={list} thing={thing} />
+                {/* <div>
                     {list
                         .filter((obj) => obj.topic === "fact")
                         .map((val) => {
@@ -25,11 +28,10 @@ const Info = ({ list }) => {
                                     <div>
                                         <p key={val.id}>{val.question}</p>
                                     </div>
-                                    <p className="reply">reply</p>
                                 </div>
                             );
                         })}
-                </div>
+                </div> */}
             </div>
         </div>
     );
