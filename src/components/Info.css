@@ -1,0 +1,24 @@
+
+.info-header {
+    padding-top: 45px;
+    padding-bottom: 20px;
+    font-family: "Ledger", serif;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.topic-heading {
+    width: 650px;
+    border-bottom: solid black 2px;
+    margin: auto;
+}
+
+.info-ul li{
+    text-decoration: none;
+    display:inline-block;
+    margin: 0 50px 10px 50px;
+    font-size: 21px;
+    color: #000000;
+    cursor: pointer;
+}

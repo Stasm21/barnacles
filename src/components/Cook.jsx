@@ -18,8 +18,8 @@ const Cook = () => {
                     </h1>
                     <div>
                         <ol className="cook-ul">
-                            <li>Rinse Gooseneck Barnacles off with water</li>
-                            <li>Fill pot with ocean water, or salt water</li>
+                            <li>Rinse gooseneck barnacles off with water</li>
+                            <li>Fill pot with ocean water or salt water</li>
                             <li>Bring water to a boil</li>
                             <li>Throw barnacles in boiling water</li>
                             <li>Cook for 45 seconds to 1 minute</li>

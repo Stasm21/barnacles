@@ -43,9 +43,9 @@ const Navbar = () => {
                                 <a href="#">REGULATIONS</a>
                             </li>
                         </Link>
-                        <Link to="/faqs">
+                        <Link to="/info">
                             <li>
-                                <a href="#">FAQS</a>
+                                <a href="#">INFO</a>
                             </li>
                         </Link>
                     </ul>

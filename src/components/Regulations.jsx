@@ -8,11 +8,11 @@ const Regulations = () => {
                 <h1 className="regulations-heading">OREGON REGULATIONS</h1>
             </div>
             <div className="reg-info">
-                <p>
-                    Currently Oregon regulations limit wild harvest of the
-                    barnacles to 50 individuals of any size on man-made
-                    structures like rock jetties but not on natural rock
-                    formations. Please make sure to check regulations on Oregons
+                <p className="reg-details">
+                    Currently, Oregon regulations limit wild harvesting of
+                    barnacles of any size to 50 individuals on man-made
+                    structures such as rock jetties, but not on natural rock
+                    formations. Please make sure to check the regulations on Oregon's
                     Department of Fish and Wildfire website at
                     <a
                         className="reg-site"
@@ -24,7 +24,7 @@ const Regulations = () => {
                     . The Oregon Department of Agriculture's (ODA) shellfish
                     biotoxin hotline is toll free and is updated immediately
                     when shellfish biotoxins reach the alert level. The hotline
-                    ​is your best source for up-to-date closure information.
+                    ​is your best source for up-to-date closure information. <br />
                     ​1-800-448-2474​
                 </p>
             </div>

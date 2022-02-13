@@ -24,6 +24,10 @@
     margin: auto;
 }
 
+.reg-details {
+    font-size: 20px;
+}
+
 .reg-site {
     color: rgb(2, 86, 205);
 }

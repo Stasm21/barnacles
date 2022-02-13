@@ -16,11 +16,11 @@ const Harvest = () => {
                 <div className="harvest-info">
                     <h1 className="harvest-heading">Harvesting</h1>
                     <p>
-                        Harvesting them can be very difficult depending on where
-                        you are. In Spain and Portugal, people risk their lives
-                        to get their hands on these, they can be found in
-                        between rocks and you might have to get in between waves
-                        to get a good clump. The more dangerous spots yield
+                        Harvesting gooseneck barnacles can be a very difficult task depending on where
+                        you live. In Spain and Portugal, people risk their lives
+                        to get their hands on them. Oftentimes, the barnacles can be found in
+                        between rocks that are further in the ocean and can result in getting caught in the midst of waves
+                        just to get a good bunch. The more dangerous spots yield
                         tastier barnacles, making the gathering process of this
                         ingredient that much harder.
                     </p>
@@ -30,11 +30,11 @@ const Harvest = () => {
                 <div className="harvest-info">
                     <h1 className="harvest-heading">Where?</h1>
                     <p>
-                        In Oregon, you can find them growing in many different
-                        places, such as Jetties, natural rock formations, large
+                        In Oregon, you can find gooseneck barnacles growing in a variety of
+                        different places such as jetties, natural rock formations, large
                         vessels, buoys, pilings or anything that sits in the
-                        water near the shore. Gooseneck barnacles will stick
-                        themselves to almost anything including each other.
+                        water near the shore. They will attach
+                        themselves to almost anything, including each other.
                     </p>
                 </div>
                 <div className="harvest-img-2">
@@ -52,21 +52,21 @@ const Harvest = () => {
                 <div className="harvest-info">
                     <h1 className="harvest-heading">How?</h1>
                     <p>
-                        All harvesting is done by hand. You can you use a
-                        handtool such as a putty knife, or anything that can
-                        help you pull the barnacles from the rock. They are on
-                        very strong and can be difficult to harvest without
-                        damaging. Cut the tool all the way until you feel the
-                        rock and try to scrape off a good sized clump to take
-                        with you. The bigger and fatter barnacles are considered
-                        the higher grade ones.
+                        All harvesting is done by hand. You can use a
+                        hand tool such as a putty knife or anything that can
+                        help you pull the barnacles off of where they are found.
+                        You will find that the they are firmly fixed on the surface that they attach themselves
+                        to and it can sometimes be difficult to harvest without
+                        damage. A good trick is to cut the tool all the way down until you feel the
+                        rock and try to scrape off a good sized clump. The bigger and fatter barnacles are considered
+                        the ones of higher grade.
                     </p>
                 </div>
             </div>
             <div className="video-box">
                 <h1 className="video-heading">
-                    Here's example of how dangerous this can get,
-                    <br /> Gordon Ramsey harvesting in Portugal.
+                    Watch this video of Gordon Ramsey harvesting barnacles in Portugal to get an idea of how dangerous it can be.
+                    <br />
                 </h1>
                 <iframe
                     width="560"

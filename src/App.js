@@ -6,7 +6,9 @@ import Home from "./components/Home";
 import Harvest from "./components/Harvest";
 import Cook from "./components/Cook";
 import Regulations from "./components/Regulations";
-import FAQS from "./components/FAQS";
+import Info from "./components/Info";
+import General from "./components/General";
+// import FAQS from "./components/FAQS";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -45,7 +47,8 @@ function App() {
                         <Route path="harvest" element={<Harvest />} />
                         <Route path="cook" element={<Cook />} />
                         <Route path="regulations" element={<Regulations />} />
-                        <Route
+                        <Route path="info" element={<Info />} />
+                        {/* <Route
                             path="faqs"
                             element={
                                 <FAQS
@@ -57,11 +60,12 @@ function App() {
                                     list={list}
                                 />
                             }
-                        />
+                        /> */}
+                        <Route path="general" element={<General />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }
