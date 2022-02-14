@@ -24,8 +24,6 @@ function App() {
         });
     }, []);
 
-    // console.log(setList)
-
     const submitTopic = () => {
         Axios.post("http://localhost:8000/api/insert", {
             topic: topic,

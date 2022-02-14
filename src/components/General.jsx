@@ -27,20 +27,6 @@ const General = ({ list, submitTopic }) => {
             </div>
             <div>
                 <FilteredGeneralCard list={list} />
-                {/* {list
-                    .filter((obj) => obj.topic === "question")
-                    .map((val) => {
-                        return (
-                            <div>
-                                <div>
-                                    <h1 key={val.id}>{val.topic}</h1>
-                                </div>
-                                <div>
-                                    <p key={val.id}>{val.question}</p>
-                                </div>
-                            </div>
-                        );
-                    })} */}
             </div>
         </div>
     );
