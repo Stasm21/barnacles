@@ -1,10 +1,24 @@
-import FilteredCard from "./FilteredFactCard";
+import FilteredFactCard from "./FilteredFactCard";
 import "./Info.css";
 import InfoNav from "./InfoNav";
 import { useState } from "react";
 
-const Info = ({ list }) => {
+const Info = ({ list, setTopic, setText, submitInfo }) => {
     const [showFactInput, setShowFactInput] = useState(false);
+
+    const inputTextHandler = (e) => {
+        setText(e.target.value)
+        setTopic('fact')
+    }
+    console.log(list)
+
+    // const
+
+    const submitPostHandler = (e) => {
+        e.preventDefault();
+        submitInfo();
+        setShowFactInput(false)
+    }
 
     return (
         <div className="info-main">
@@ -21,10 +35,13 @@ const Info = ({ list }) => {
                 </div>
                 {showFactInput && (
                     <div>
-                        <textarea className="facts-text"></textarea>
+                        <textarea
+                            onChange={inputTextHandler}
+                            className="facts-text"
+                        ></textarea>
                         <div className="facts-button-box">
                             <button
-                                onClick={() => setShowFactInput(false)}
+                                onClick={submitPostHandler}
                                 className="facts-post-button"
                             >
                                 POST
@@ -32,7 +49,7 @@ const Info = ({ list }) => {
                         </div>
                     </div>
                 )}
-                <FilteredCard list={list} />
+                <FilteredFactCard list={list} />
             </div>
         </div>
     );
