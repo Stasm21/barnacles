@@ -3,9 +3,19 @@ import InfoNav from "./InfoNav";
 import FilteredGeneralCard from "./FilteredGeneralCard";
 import { useState } from "react";
 
-const General = ({ list, submitTopic }) => {
-
+const General = ({ list, setTopic, setText, submitInfo }) => {
     const [showGeneralInput, setShowGeneralInput] = useState(false);
+
+    const inputTextHandler = (e) => {
+        setText(e.target.value);
+        setTopic("info");
+    };
+
+    const submitPostHandler = (e) => {
+        e.preventDefault();
+        submitInfo();
+        setShowGeneralInput(false);
+    };
 
     return (
         <div>
@@ -24,10 +34,13 @@ const General = ({ list, submitTopic }) => {
 
             {showGeneralInput && (
                 <div>
-                    <textarea className="facts-text"></textarea>
+                    <textarea
+                        onChange={inputTextHandler}
+                        className="facts-text"
+                    ></textarea>
                     <div className="facts-button-box">
                         <button
-                            onClick={() => setShowGeneralInput(false)}
+                            onClick={submitPostHandler}
                             className="facts-post-button"
                         >
                             POST
@@ -37,7 +50,6 @@ const General = ({ list, submitTopic }) => {
             )}
 
             <FilteredGeneralCard list={list} />
-
         </div>
     );
 };

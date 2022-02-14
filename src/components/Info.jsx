@@ -12,7 +12,6 @@ const Info = ({ list, setTopic, setText, submitInfo }) => {
     };
     console.log(list);
 
-    // const dfhgh
 
     const submitPostHandler = (e) => {
         e.preventDefault();

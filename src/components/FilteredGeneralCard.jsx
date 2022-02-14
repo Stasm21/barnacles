@@ -4,7 +4,7 @@ const FilteredGeneralCard = ({ list }) => {
     return (
         <div className="general-box">
             {list
-                .filter((obj) => obj.topic === "Question")
+                .filter((obj) => obj.topic === "info")
                 .map((val) => {
                     return (
                         <div className="general-card">
