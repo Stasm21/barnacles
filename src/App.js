@@ -13,13 +13,10 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 function App() {
     const [topic, setTopic] = useState("");
     const [text, setText] = useState("");
     const [list, setList] = useState([]);
-
-
 
     useEffect(() => {
         Axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/get`).then(
@@ -40,7 +37,7 @@ function App() {
 
     //localhost:5001/api/insert
 
-    http: return (
+    return (
         <div className="App">
             {/* <Navbar /> */}
             <BrowserRouter>
