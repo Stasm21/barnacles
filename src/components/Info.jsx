@@ -3,33 +3,6 @@ import "./Info.css";
 import InfoNav from "./InfoNav";
 import { useState } from "react";
 
-const Info = ({ list, setTopic, setText, submitInfo }) => {
-    const [showFactInput, setShowFactInput] = useState(false);
-
-    const inputTextHandler = (e) => {
-        setText(e.target.value)
-        setTopic('fact')
-    }
-    console.log(list)
-
-    // const
-
-    const submitPostHandler = (e) => {
-        e.preventDefault();
-        submitInfo();
-        setShowFactInput(false)
-    }
-
-    return (
-        <div className="info-main">
-            <div>
-                <InfoNav />
-                <h1 className="facts-header-main">Facts</h1>
-                <div>
-                    <button
-                        onClick={() => setShowFactInput(true)}
-                        className="facts-add-button"
-                    >
                         + ADD
                     </button>
                 </div>
@@ -50,9 +23,16 @@ const Info = ({ list, setTopic, setText, submitInfo }) => {
                     </div>
                 )}
                 <FilteredFactCard list={list} />
-            </div>
-        </div>
-    );
-};
-
-export default Info;
+=======
+                    <button onClick={() => setShowFactInput(true)} className="facts-add-button">+ ADD</button>
+                </div>
+                {showFactInput && (
+                    <div>
+                        <textarea className="facts-text"></textarea>
+                        <div>
+                            <button onClick={() => setShowFactInput(false)} className="facts-post-button">POST</button>
+                        </div>
+                    </div>
+                )}
+                <FilteredCard list={list} />
+>>>>

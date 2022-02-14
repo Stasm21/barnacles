@@ -13,6 +13,7 @@ const FilteredFactCard = ({ list }) => {
                             </h1>
 
                             <p className="fact-card-text" >
+
                                 {val.question}
                             </p>
                         </div>

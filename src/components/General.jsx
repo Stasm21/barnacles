@@ -21,6 +21,7 @@ const General = ({ list, submitTopic }) => {
                     </button>
                 </div>
             </div>
+
             {showGeneralInput && (
                 <div>
                     <textarea className="facts-text"></textarea>
@@ -36,6 +37,7 @@ const General = ({ list, submitTopic }) => {
             )}
 
             <FilteredGeneralCard list={list} />
+
         </div>
     );
 };
