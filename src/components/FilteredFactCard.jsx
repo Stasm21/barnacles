@@ -12,7 +12,8 @@ const FilteredFactCard = ({ list }) => {
                                 {val.topic}
                             </h1>
 
-                            <p className="fact-card-text" key={val.id}>
+                            <p className="fact-card-text" >
+
                                 {val.question}
                             </p>
                         </div>

@@ -1,19 +1,29 @@
-import FilteredCard from "./FilteredFactCard";
+import FilteredFactCard from "./FilteredFactCard";
 import "./Info.css";
 import InfoNav from "./InfoNav";
 import { useState } from "react";
 
-const Info = ({ list }) => {
-    const [showFactInput, setShowFactInput] = useState(false);
-
-
-
-    return (
-        <div className="info-main">
-            <div>
-                <InfoNav />
-                <h1 className="facts-header">Facts</h1>
-                <div>
+                        + ADD
+                    </button>
+                </div>
+                {showFactInput && (
+                    <div>
+                        <textarea
+                            onChange={inputTextHandler}
+                            className="facts-text"
+                        ></textarea>
+                        <div className="facts-button-box">
+                            <button
+                                onClick={submitPostHandler}
+                                className="facts-post-button"
+                            >
+                                POST
+                            </button>
+                        </div>
+                    </div>
+                )}
+                <FilteredFactCard list={list} />
+=======
                     <button onClick={() => setShowFactInput(true)} className="facts-add-button">+ ADD</button>
                 </div>
                 {showFactInput && (
@@ -25,9 +35,4 @@ const Info = ({ list }) => {
                     </div>
                 )}
                 <FilteredCard list={list} />
-            </div>
-        </div>
-    );
-};
-
-export default Info;
+>>>>

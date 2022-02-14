@@ -24,16 +24,19 @@ function App() {
         });
     }, []);
 
-    // console.log(setList)
 
-    const submitTopic = () => {
-        Axios.post("https://mysql-deploy-heroku.herokuapp.com/api/insert", {
+    const submitInfo = () => {
+        Axios.post("http://localhost:8000/api/insert", {
+
+    
+
             topic: topic,
             question: text,
         });
 
-        setList([...list, { topic: topic, questions: text }]);
+        setList([...list, { topic: topic, question: text }]);
     };
+    console.log(list)
 
     return (
         <div className="App">
@@ -48,28 +51,22 @@ function App() {
                         <Route
                             path="info"
                             element={
-                                <Info submitTopic={submitTopic} list={list} />
-                            }
-                        />
-                        {/* <Route
-                            path="faqs"
-                            element={
-                                <FAQS
-                                    topic={topic}
-                                    setTopic={setTopic}
-                                    text={text}
-                                    setText={setText}
-                                    submitTopic={submitTopic}
+                                <Info
+                                    submitInfo={submitInfo}
                                     list={list}
+                                    setTopic={setTopic}
+                                    setText={setText}
                                 />
                             }
-                        /> */}
+                        />
                         <Route
                             path="general"
                             element={
                                 <General
-                                    submitTopic={submitTopic}
+                                    submitInfo={submitInfo}
                                     list={list}
+                                    setTopic={setTopic}
+                                    setText={setText}
                                 />
                             }
                         />

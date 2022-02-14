@@ -1,9 +1,10 @@
 
-.facts-header {
+.facts-header-main {
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     font-size: 25px;
     margin-top: 40px;
+    color: black;
 }
 
 .facts-add-button {
@@ -29,18 +30,3 @@
     width: 584px;
     height: 194px;
     margin-top: 15px;
-}
-
-.facts-post-button {
-    width: 584px;
-    height: 102px;
-    color: black;
-    font-size: 37px;
-    margin: auto;
-    margin-top: 30px;
-    font-family: "Times New Roman", Times, serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}

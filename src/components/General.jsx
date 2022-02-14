@@ -1,17 +1,11 @@
 import "./General.css";
 import InfoNav from "./InfoNav";
-import Test from "./Test";
 import FilteredGeneralCard from "./FilteredGeneralCard";
+import { useState } from "react";
 
 const General = ({ list, submitTopic }) => {
-    const addFact = () => {
-        console.log("hello");
-        return (
-            <div>
-                <h1>Hello</h1>
-            </div>
-        );
-    };
+
+    const [showGeneralInput, setShowGeneralInput] = useState(false);
 
     return (
         <div>
@@ -19,15 +13,31 @@ const General = ({ list, submitTopic }) => {
                 <InfoNav />
                 <h1 className="general-heading">General Info</h1>
                 <div>
-                    <button onClick={addFact} className="general-add-button">
+                    <button
+                        onClick={() => setShowGeneralInput(true)}
+                        className="general-add-button"
+                    >
                         + ADD
                     </button>
-                    {addFact}
                 </div>
             </div>
-            <div>
-                <FilteredGeneralCard list={list} />
-            </div>
+
+            {showGeneralInput && (
+                <div>
+                    <textarea className="facts-text"></textarea>
+                    <div className="facts-button-box">
+                        <button
+                            onClick={() => setShowGeneralInput(false)}
+                            className="facts-post-button"
+                        >
+                            POST
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            <FilteredGeneralCard list={list} />
+
         </div>
     );
 };
