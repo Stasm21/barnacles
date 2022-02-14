@@ -12,13 +12,7 @@ const FilteredGeneralCard = ({ list }) => {
                                 {val.topic}
                             </h1>
 
-
-                            <p className="general-card-text" >
-
-
-
-                                {val.question}
-                            </p>
+                            <p className="general-card-text">{val.question}</p>
                         </div>
                     );
                 })}

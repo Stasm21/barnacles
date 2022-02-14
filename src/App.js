@@ -19,24 +19,20 @@ function App() {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        Axios.get("https://mysql-deploy-heroku.herokuapp.com/api/get").then((response) => {
+        Axios.get("http://localhost:8000/api/get").then((response) => {
             setList(response.data);
         });
     }, []);
 
-
     const submitInfo = () => {
         Axios.post("http://localhost:8000/api/insert", {
-
-    
-
             topic: topic,
             question: text,
         });
 
         setList([...list, { topic: topic, question: text }]);
     };
-    console.log(list)
+    console.log(list);
 
     return (
         <div className="App">
