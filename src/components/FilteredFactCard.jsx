@@ -3,7 +3,7 @@ import "./FilteredFactCard.css";
 const FilteredFactCard = ({ list }) => {
     return (
         <div className="fact-box">
-            {list
+            {list && list
                 .filter((obj) => obj.topic === "fact")
                 .map((val) => {
                     return (

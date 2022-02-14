@@ -13,28 +13,34 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+
 function App() {
     const [topic, setTopic] = useState("");
     const [text, setText] = useState("");
     const [list, setList] = useState([]);
 
+
+
     useEffect(() => {
-        Axios.get("http://localhost:8000/api/get").then((response) => {
-            setList(response.data);
-        });
+        Axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/get`).then(
+            (response) => {
+                setList(response.data);
+            }
+        );
     }, []);
 
     const submitInfo = () => {
-        Axios.post("http://localhost:8000/api/insert", {
+        Axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/insert`, {
             topic: topic,
             question: text,
         });
 
         setList([...list, { topic: topic, question: text }]);
     };
-    console.log(list);
 
-    return (
+    //localhost:5001/api/insert
+
+    http: return (
         <div className="App">
             {/* <Navbar /> */}
             <BrowserRouter>
