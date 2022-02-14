@@ -2,7 +2,7 @@
 .general-card {
     width: 584px;
     height: 194px;
-    border: 1px solid rgb(167, 154, 154);
+    border: 1px solid #A09E9E;
     margin: auto;
     margin-top: 17px;
     display: flex;
@@ -26,4 +26,8 @@
     line-height: 23px;
     color: #000000;
     padding: 8px;
+}
+
+.general-box {
+    padding-bottom: 70px;
 }

@@ -24,3 +24,23 @@
 .info-main {
     color: #565656;
 }
+
+.facts-text {
+    width: 584px;
+    height: 194px;
+    margin-top: 15px;
+}
+
+.facts-post-button {
+    width: 584px;
+    height: 102px;
+    color: black;
+    font-size: 37px;
+    margin: auto;
+    margin-top: 30px;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

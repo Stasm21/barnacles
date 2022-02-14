@@ -1,11 +1,12 @@
 import FilteredCard from "./FilteredFactCard";
 import "./Info.css";
 import InfoNav from "./InfoNav";
+import { useState } from "react";
 
 const Info = ({ list }) => {
+    const [showFactInput, setShowFactInput] = useState(false);
 
-    const thing = 'fact'
-    // console.log(list)
+
 
     return (
         <div className="info-main">
@@ -13,25 +14,17 @@ const Info = ({ list }) => {
                 <InfoNav />
                 <h1 className="facts-header">Facts</h1>
                 <div>
-                    <button className="facts-add-button">+ ADD</button>
+                    <button onClick={() => setShowFactInput(true)} className="facts-add-button">+ ADD</button>
                 </div>
-                <FilteredCard list={list} thing={thing} />
-                {/* <div>
-                    {list
-                        .filter((obj) => obj.topic === "fact")
-                        .map((val) => {
-                            return (
-                                <div>
-                                    <div>
-                                        <h1 key={val.id}>{val.topic}</h1>
-                                    </div>
-                                    <div>
-                                        <p key={val.id}>{val.question}</p>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                </div> */}
+                {showFactInput && (
+                    <div>
+                        <textarea className="facts-text"></textarea>
+                        <div>
+                            <button onClick={() => setShowFactInput(false)} className="facts-post-button">POST</button>
+                        </div>
+                    </div>
+                )}
+                <FilteredCard list={list} />
             </div>
         </div>
     );

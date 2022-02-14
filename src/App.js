@@ -19,7 +19,7 @@ function App() {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:8000/api/get").then((response) => {
+        Axios.get("https://mysql-deploy-heroku.herokuapp.com/api/get").then((response) => {
             setList(response.data);
         });
     }, []);
@@ -27,7 +27,7 @@ function App() {
     // console.log(setList)
 
     const submitTopic = () => {
-        Axios.post("http://localhost:8000/api/insert", {
+        Axios.post("https://mysql-deploy-heroku.herokuapp.com/api/insert", {
             topic: topic,
             question: text,
         });
